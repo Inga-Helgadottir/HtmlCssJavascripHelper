@@ -38,12 +38,35 @@ idBtn.addEventListener("click", () => {
 let hobbyBtn = document.querySelector("#getByHobbyBtn");
 let hobbyError = document.querySelector("#errorTextHobby");
 hobbyBtn.addEventListener("click", () => {
-  console.log("here btn");
   let inputValue = document.querySelector("#hobby");
   if (inputValue.value == "") {
     hobbyError.innerHTML = "You have to pick a hobby";
   } else {
     getUserByHobby(inputValue.value);
+  }
+});
+
+let zipcodeBtn = document.querySelector("#getByzipcodeBtn");
+let zipcodeError = document.querySelector("#errorTextzipcode");
+zipcodeBtn.addEventListener("click", () => {
+  let inputValue = document.querySelector("#zipcode");
+  if (inputValue.value == "") {
+    zipcodeError.innerHTML = "You have to pick a zipcode";
+  } else {
+    zipcodeError.innerHTML = "";
+    getUserByzipcode(inputValue.value);
+  }
+});
+
+let deleteBtn = document.querySelector("#deleteByIdBtn");
+let errorDelete = document.querySelector("#errorTextDelete");
+deleteBtn.addEventListener("click", () => {
+  let inputValue = document.querySelector("#idPersonDelete");
+  if (inputValue.value == "") {
+    errorDelete.innerHTML = "You have to pick an id";
+  } else {
+    errorDelete.innerHTML = "";
+    deleteUserById(inputValue.value);
   }
 });
 
@@ -57,14 +80,18 @@ function check(i) {
       // Get user by id
       break;
     case 2:
-      // Delete user
+      // Get all hobbies
+      getAllHobbies();
       break;
     case 3:
-      // Get users by zipcode
+      // Get all zipcodes
+      getAllZipcodes();
       break;
     case 4:
+      // Get users by zipcode
+      break;
+    case 5:
       // Get users by hobby
-      getAllHobbies();
       break;
     default:
     // code block
@@ -105,16 +132,16 @@ function getUserById(id) {
       return response.json();
     })
     .then(function (result) {
-      error.innerHTML = `<p>User id: ${result.idPerson}, name: ${result.firstName} ${result.lastName}, phone number: ${result.phoneNumber}, email: ${result.email}</p>`;
+      if (result == null) {
+        error.innerHTML = `there is no user by that id`;
+      } else {
+        error.innerHTML = `<p>User id: ${result.idPerson}, name: ${result.firstName} ${result.lastName}, phone number: ${result.phoneNumber}, email: ${result.email}</p>`;
+      }
     });
 }
 
 function getAllHobbies() {
   fetch("http://localhost:8080/devops_starter_war_exploded/api/hobby/all", {
-    //method: "GET", // *GET, POST, PUT, DELETE, etc.
-    //mode: "cors", // no-cors, *cors, same-origin
-    //cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    //credentials: "same-origin", // include, *same-origin, omit
     headers: {
       "Content-Type": "application/json",
     },
@@ -124,19 +151,16 @@ function getAllHobbies() {
     })
     .then(function (result) {
       result.forEach((element) => {
-        sections[4].innerHTML += `<p>Hoby id: ${element.id}, name: ${element.name}, wiki link: ${element.wikiLink}, category: ${element.category}, type: ${element.type}</p>`;
+        sections[2].innerHTML += `<p>Hoby id: ${element.id}, name: ${element.name}, wiki link: ${element.wikiLink}, category: ${element.category}, type: ${element.type}</p>`;
       });
     });
 }
+
 function getUserByHobby(hobby) {
-  console.log("here hh");
   fetch(
-    "http://localhost:8080/devops_starter_war_exploded/api/hobby/" + hobby,
+    "http://localhost:8080/devops_starter_war_exploded/api/users/hobby/" +
+      hobby,
     {
-      method: "GET", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: "same-origin", // include, *same-origin, omit
       headers: {
         "Content-Type": "application/json",
       },
@@ -148,10 +172,75 @@ function getUserByHobby(hobby) {
     .then(function (result) {
       if (result == null) {
         hobbyError.innerHTML += `None of our users has that hobby`;
+      } else if (result.length < 2) {
+        hobbyError.innerHTML += `<p>User id: ${result.idPerson}, name: ${result.firstName} ${result.lastName}, phone number: ${result.phoneNumber}, email: ${result.email}</p>`;
       } else {
         result.forEach((element) => {
           hobbyError.innerHTML += `<p>User id: ${element.idPerson}, name: ${element.firstName} ${element.lastName}, phone number: ${element.phoneNumber}, email: ${element.email}</p>`;
         });
+      }
+    });
+}
+
+function getAllZipcodes() {
+  fetch("http://localhost:8080/devops_starter_war_exploded/api/cityinfo/all", {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (result) {
+      result.forEach((element) => {
+        sections[3].innerHTML += `<p>cityinfo id: ${element.id}, zipcode: ${element.zipcode}, city: ${element.city}<p>`;
+      });
+    });
+}
+
+function getUserByzipcode(zipcode) {
+  fetch(
+    "http://localhost:8080/devops_starter_war_exploded/api/users/zipcode/" +
+      zipcode,
+    {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (result) {
+      if (result == null) {
+        zipcodeError.innerHTML += `None of our users has that zipcode`;
+      } else if (result.length < 2) {
+        zipcodeError.innerHTML += `<p>User id: ${result.idPerson}, name: ${result.firstName} ${result.lastName}, phone number: ${result.phoneNumber}, email: ${result.email}</p>`;
+      } else {
+        result.forEach((element) => {
+          zipcodeError.innerHTML += `<p>User id: ${element.idPerson}, name: ${element.firstName} ${element.lastName}, phone number: ${element.phoneNumber}, email: ${element.email}</p>`;
+        });
+      }
+    });
+}
+function deleteUserById(id) {
+  fetch("http://localhost:8080/devops_starter_war_exploded/api/users/" + id, {
+    method: "DELETE", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (result) {
+      if (result == null) {
+        errorDelete.innerHTML = `there is no user by that id`;
+      } else {
+        errorDelete.innerHTML = `<p>The user with the id ${id} has been deleted</p>`;
       }
     });
 }

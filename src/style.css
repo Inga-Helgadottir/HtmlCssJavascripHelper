@@ -52,6 +52,9 @@ section h2 {
   border: solid 2px black;
 }
 
-#errorText {
+#errorText,
+#errorTextHobby,
+#errorTextzipcode,
+#errorTextDelete {
   margin-top: 20px;
 }

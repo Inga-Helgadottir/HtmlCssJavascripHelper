@@ -11,9 +11,11 @@
       <ul id="uls">
         <li>Get all users</li>
         <li>Get user by id</li>
-        <li>Delete user</li>
+        <li>Get all hobbies</li>
+        <li>Get all zipcodes</li>
         <li>Get users by zipcode</li>
         <li>Get users by hobby</li>
+        <li>Delete user by id</li>
       </ul>
     </nav>
     <section id="sections">
@@ -29,14 +31,19 @@
         <p id="errorText"></p>
       </section>
       <section>
-        <h2>Delete user</h2>
-        <label for="idPerson">select id</label>
-        <input type="number" id="idPerson" />
+        <h2>Get all hobbies</h2>
+      </section>
+      <section>
+        <h2>Get all zipcodes</h2>
       </section>
       <section>
         <h2>Get users by zipcode</h2>
         <label for="zipcode">select zipcode</label>
         <input type="text" id="zipcode" />
+        <button id="getByzipcodeBtn" class="myBtn">
+          get people with a zipcode
+        </button>
+        <p id="errorTextzipcode"></p>
       </section>
       <section>
         <h2>Get users by hobby</h2>
@@ -46,7 +53,13 @@
           get people with a hobby
         </button>
         <p id="errorTextHobby"></p>
-        <h3>Hobbies</h3>
+      </section>
+      <section>
+        <h2>Delete user by id</h2>
+        <label for="idPerson">select id</label>
+        <input type="number" id="idPersonDelete" />
+        <button id="deleteByIdBtn" class="myBtn">delete person</button>
+        <p id="errorTextDelete"></p>
       </section>
     </section>
 
