@@ -3,7 +3,7 @@ This is the Horizontal Navigation Bar Example with Active/Current Navigation Lin
 From here https://www.w3schools.com/css/css_navbar.asp
 */
 
-ul.header {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -11,18 +11,19 @@ ul.header {
   background-color: #333;
 }
 
-ul.header li {
+ul li {
   float: left;
 }
 
-ul.header li a {
+ul li {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  cursor: pointer;
 }
-ul.header li a:hover:not(.active) {
+ul li a:hover:not(.active) {
   background-color: #111;
 }
 
@@ -36,4 +37,21 @@ ul.header li a:hover:not(.active) {
   padding: 18px 16px;
   height: 1000px;
   font-size: small;
+}
+
+section {
+  margin-left: 20px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+.myBtn {
+  background-color: aqua;
+  border: solid 2px black;
+}
+
+#errorText {
+  margin-top: 20px;
 }
