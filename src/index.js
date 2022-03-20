@@ -16,6 +16,19 @@ if you want to add a javascript file you do it here with the other imports
 in order for that to work you need to add to the other javascript file
 export default functionName
 */
+/*
+Inhold:
+line 32 - favicon
+line 51 - setting up the page changer
+line 201 - innerHTML
+line 229 - doing something when a key is pressed
+line 264 - the difference between == and ===
+line 277 - useful little things
+line 298 - fetch 
+line 444 - dropdown
+line 491 - forms - getting info from html in js
+line 561 - tables
+*/
 var link = document.createElement("link");
 //this means i want to create a link, witch is the tag for making a favicon
 link.type = "image/png";
@@ -35,11 +48,13 @@ but since this is a SPA, it looks like this
 the reason it is different is that in a SPA you have to import the image 
 rather than just pointing at it in the project
 */
+//-----------------------------------------------SETTING UP THE PAGE CHANGER
 /*
 document says we are looking in the html document
 querySelector says that whatever comes next class, id or element selector surrounded by ("") is what im looking for
-if you use querySelector on an item that there are many of you only get the first one
-examples of things you can put in there ("")
+if you use querySelector on an item, if there are many of them, you only get the first one
+if you want them all you need to use querySelectorAll
+examples of things you can put in there ("") after querySelector or querySelectorAll
 in javascript  -  in the html        -  in css      - selector type
 (".className") - class="className"   - .className{} - class
 ("#idName")    - id="idName"         - #idName{}    - id
@@ -182,6 +197,7 @@ function hideAll() {
     //this line removes the class called selected from all lis from the uls array
   }
 }
+
 //-------------------------------------------INNERHTML-----------------------------------------------------------------------
 let divId = document.querySelector("#divId");
 //this selects the p tag in my html with the id="pTagId"
@@ -196,7 +212,7 @@ innerHTML just means that i want to add to the html
 here i user innerHTML to write all that is in the middle of the ``, inside the div with the id="divId"
 this is what the div looks like in the html 
 <div id="divId">This is a div</div>
-and this is what it looks like after the code above runns
+and this is what it looks like after the code above runs
 <div id="divId">
   This is a div
   <ul id="stopBackground">
@@ -214,12 +230,12 @@ a class selector will be overwritten by an id=""
 document.addEventListener("keydown", (event) => {
   console.log("this is the keycode for the key you pressed: " + event.keyCode);
   //this line writes the pressed key in the console
+  //if keyCode has a line through it dont worry it still works
   console.log("you can also see whitch key it is: " + event.key);
   //this line writes the name of the key pressed
   console.log("this is what the event looks like on its own in the console: ");
   console.log(event);
   if (event.keyCode == 36) {
-    //if keyCode has a line through it dont worry it still works
     console.log("You have pressed the up arrow");
   } else if (event.keyCode == 40) {
     console.log("You have pressed the down arrow");
@@ -541,6 +557,7 @@ here i set the src and the alt of the image in my html
 it looks like this in the html
 <img src="" alt="" id="img">
 */
+
 //---------------------------------TABLES--------------------------------------------------------------------------
 let fillTableBtn = document.querySelector("#fillTable");
 fillTableBtn.addEventListener("click", fillTableFunction);
