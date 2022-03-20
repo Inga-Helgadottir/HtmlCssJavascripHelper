@@ -313,6 +313,15 @@ function getAllPokemons() {
       //this tells what kind of response we want
     })
     .then(function (result) {
+      /*
+      when you are fetching something 
+      it is best to only have a console.log(result);
+      so that you can see what the result looks like
+      the result is allways an object
+      you get an element in the object by writing
+      result. one of the items inside the object
+      result.results is an array inside the result object
+       */
       console.log("This is the result i get");
       console.log("result: " + result);
       console.log("This is how i get stuff from the result");
@@ -343,6 +352,7 @@ hidePokemonBtn.addEventListener("click", () => {
 <input type="number" id="idPersonDelete" />
 <button id="deleteByIdBtn" class="myBtn">delete person</button>
 <p id="errorTextDelete"></p>
+REMEMBER this fetch only works if you are running our CA1 project (tomcat)
 */
 let deleteBtn = document.querySelector("#deleteByIdBtn");
 let errorDelete = document.querySelector("#errorTextDelete");
@@ -531,3 +541,44 @@ here i set the src and the alt of the image in my html
 it looks like this in the html
 <img src="" alt="" id="img">
 */
+//---------------------------------TABLES--------------------------------------------------------------------------
+let fillTableBtn = document.querySelector("#fillTable");
+fillTableBtn.addEventListener("click", fillTableFunction);
+
+function fillTableFunction() {
+  let myTable = document.querySelector("#table");
+  fetch("https://pokeapi.co/api/v2/pokemon/", {
+    method: "GET", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    //this is just information about the fetch
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then(function (response) {
+      return response.json();
+      //this tells what kind of response we want
+    })
+    .then(function (result) {
+      console.log("the pokemon API result looks like this");
+      console.log(result);
+      /*result.results is an array inside the result object
+      therefor i can use a forEach to loop through it
+       */
+      result.results.forEach((element) => {
+        myTable.innerHTML += `<tr>
+          <td>${element.name}</td>
+          <td>${element.url}</td>
+        </tr>`;
+        /* inside each item in that array there is a name and a url
+        element.name is how i get the name
+        if i had to get one of the items i would call it like a normal array
+        result.results[PutIndexNumberHere]
+        then i get the name with
+        result.results[PutIndexNumberHere].name
+      */
+      });
+    });
+}
