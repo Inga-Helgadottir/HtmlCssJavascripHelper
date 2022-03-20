@@ -1,4 +1,5 @@
-/*colors in css - https://www.google.com/search?q=color+picker&oq=colo&aqs=chrome.1.69i57j35i39j46i20i199i263i465i512j0i512j46i199i465i512j69i60l2j69i61.2440j0j7&sourceid=chrome&ie=UTF-8
+/*
+colors in css - https://www.google.com/search?q=color+picker&oq=colo&aqs=chrome.1.69i57j35i39j46i20i199i263i465i512j0i512j46i199i465i512j69i60l2j69i61.2440j0j7&sourceid=chrome&ie=UTF-8
 the link above is to a color picker, 
 you can choose any color of any brightness and get its hashcode value 
 this is how hashcodes work
@@ -16,16 +17,19 @@ they just dont give as many options
 #
 */
 .theMostImportantCssStyles {
-  font-family: "Courier New", Courier, monospace; /*this chooses the font type*/
-  font-weight: bold; /*makes the text bold, you can also choose bolder or a number in the 100*/
-  color: blue; /*the color of the text in this container*/
+  font-family: "Courier New", Courier, monospace;
+  /*this chooses the font family*/
+  font-weight: bold;
+  /*makes the text bold, you can also choose bolder or a number in the 100*/
+  color: blue;
+  /*the color of the text in this container*/
   border: solid 1px #000;
   /*
   border needs to have those three variables
   solid is the type of line you want
-  the other options are dashed, dotted, double, groove
+  the other options are dashed, dotted, double, groove...
   2px is the with of the border
-  last we have the color of the border
+  #000 is the color of the border
   */
   padding: 5px;
   /*
@@ -48,7 +52,7 @@ they just dont give as many options
   */
   overflow: hidden;
   /*
-  hides the parts you cant see
+  hides the overflow
   while overflow: visible; does the opposite
   */
   display: none;
@@ -59,9 +63,12 @@ they just dont give as many options
   /*
   makes the element visable again
   */
+  text-align: center;
+  /*
+  centers texts and only text
+  */
   text-decoration: underline;
   text-decoration: line-through;
-  text-align: center;
   background-color: #4caf50;
   font-size: 15px;
 }
@@ -76,7 +83,7 @@ they just dont give as many options
 ul {
   list-style-type: none;
   /*
-  removes the dots in from of every list item (li)
+  removes the dots/numbers in from of every list item (li)
   it must be placed on a ul or an ol
   you can do the same to remove numbers from the ol list items
   */
@@ -120,6 +127,10 @@ section h2 {
 
 #stopBackground {
   background-color: #fff;
+  /*
+  the element selector uls has a dark backgound color
+  this is an id so it overwrites that backgound color
+  */
 }
 
 /*---------------------------------------------DROPDOWN*/
@@ -227,7 +238,8 @@ same as the one before exept it reverses the order of the items
   margin-top: 10px;
   width: 60px;
   height: auto;
-  /*when you are setting the height and width of an image 
+  /*
+  when you are setting the height and width of an image 
   you need either the width or the height to be auto
   if you dont the image will loose its proportions*/
 }
