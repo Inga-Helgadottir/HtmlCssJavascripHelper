@@ -1,10 +1,85 @@
-/*
-This is the Horizontal Navigation Bar Example with Active/Current Navigation Link
-From here https://www.w3schools.com/css/css_navbar.asp
+/*colors in css - https://www.google.com/search?q=color+picker&oq=colo&aqs=chrome.1.69i57j35i39j46i20i199i263i465i512j0i512j46i199i465i512j69i60l2j69i61.2440j0j7&sourceid=chrome&ie=UTF-8
+the link above is to a color picker, 
+you can choose any color of any brightness and get its hashcode value 
+this is how hashcodes work
+the numbers in the hashcode go from 0-9
+and then from a-f
+there are either 3 or 6 numbers in a hashcode
+#RGB = Red, Green, Blue
+#RRGGBB
+#fff and #ffffff give white
+#000 and # 000000 gives black
+#f00 and #ff0000 gives red
+when choosing a color you can also use
+blue, red, green...
+they just dont give as many options
+#
 */
+.theMostImportantCssStyles {
+  font-family: "Courier New", Courier, monospace; /*this chooses the font type*/
+  font-weight: bold; /*makes the text bold, you can also choose bolder or a number in the 100*/
+  color: blue; /*the color of the text in this container*/
+  border: solid 1px #000;
+  /*
+  border needs to have those three variables
+  solid is the type of line you want
+  the other options are dashed, dotted, double, groove
+  2px is the with of the border
+  last we have the color of the border
+  */
+  padding: 5px;
+  /*
+  padding is what is sounds like, it makes space
+  here i say padding:5px; witch means the item gets 5px of padding on every side
+  you can also write padding: 5px 10px; witch means 5px on the top and bottom and 10px on the sides
+  you can also write padding: 1px 2px 3px 4px; witch means 1px on top, 2px on the right, 3px on the bottom and 4px on the left
+  padding: allSides;
+  padding:topANDbottom leftANDright;
+  padding:top right bottom left;
+  You can also use padding-left:; padding-right:; padding-top:; padding-bottom:;
+  the same can be done with margin:;
+  but margin:0 auto; centeres the element
+  padding adds space inside the element
+  margin adds space outside the element
+  */
+  overflow: scroll;
+  /*
+  creates a scroll bar on that element
+  */
+  overflow: hidden;
+  /*
+  hides the parts you cant see
+  while overflow: visible; does the opposite
+  */
+  display: none;
+  /*
+  hides the element
+  */
+  display: block;
+  /*
+  makes the element visable again
+  */
+  text-decoration: underline;
+  text-decoration: line-through;
+  text-align: center;
+  background-color: #4caf50;
+  font-size: 15px;
+}
+
+#hoverChange:hover {
+  /*this is how you change things when the mouse hovers over the element*/
+  font-size: 25px;
+  color: blueviolet;
+  background-color: aqua;
+}
 
 ul {
   list-style-type: none;
+  /*
+  removes the dots in from of every list item (li)
+  it must be placed on a ul or an ol
+  you can do the same to remove numbers from the ol list items
+  */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -20,7 +95,6 @@ ul li {
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
   cursor: pointer;
 }
 ul li a:hover:not(.active) {
@@ -29,14 +103,6 @@ ul li a:hover:not(.active) {
 
 .selected {
   background-color: #4caf50;
-}
-
-.content {
-  margin-left: 6%;
-  margin-right: 6%;
-  padding: 18px 16px;
-  height: 1000px;
-  font-size: small;
 }
 
 section {
@@ -52,9 +118,177 @@ section h2 {
   border: solid 2px black;
 }
 
-#errorText,
-#errorTextHobby,
-#errorTextzipcode,
-#errorTextDelete {
-  margin-top: 20px;
+#stopBackground {
+  background-color: #fff;
+}
+
+/*---------------------------------------------DROPDOWN*/
+.dropDown {
+  display: none;
+}
+/*---------------------------------------------FLEX*/
+.flexClass {
+  display: flex;
+  /*flex doesnt work unless you have display:flex;*/
+  margin-right: 22px;
+  /*creates space on the outside of the right side of the element*/
+}
+#flex1 {
+  justify-content: space-around;
+}
+#flex2 {
+  justify-content: space-between;
+}
+#flex3 {
+  justify-content: space-evenly;
+}
+#flex4 {
+  justify-content: center;
+}
+/*
+you can also use a ting called flex-direction
+the options are: 
+flex-direction: column;
+sets each item under the next
+
+flex-direction:column-reverse;
+same as the one before exept it reverses the order of the items
+
+flex-direction:row;
+sets them in a row next to each other
+
+flex-direction: row-reverse;
+same as the one before exept it reverses the order of the items
+*/
+/*---------------------------------------------GRID*/
+#grid {
+  display: grid;
+  /*grids wont work unless you have display:grid;*/
+  grid-template-columns: 33% 33% 33%;
+  /*this creates the columns*/
+  grid-template-rows: 50% 50%;
+  /*this creates the rows*/
+  /*
+  here i use % to tell the grid how it should look
+  but you can also use px              
+  */
+  width: 1000px;
+  height: 300px;
+  /*here i set the height and width of the grid itself
+  usually you dont need to do that 
+  but all of the items are empty divs
+  since i used % to make my grid rows and columns
+  the grid doesnt know how much space it has
+  */
+}
+#grid div {
+  /*this gets every div inside the div with the id grid*/
+  width: 100%;
+  height: 100%;
+  /*here i set the height and width of each of the items in the grid
+  so that it fills the entire cell*/
+}
+#first {
+  background-color: #4caf50;
+  grid-row: 2;
+  grid-column: 2;
+  /*usually this div would go in the first cell
+  because it is the first element in the grid
+  but i used grid-row and grid-column 
+  to change where it should go
+  */
+}
+#second {
+  background-color: aqua;
+}
+#third {
+  background-color: blue;
+}
+#fourth {
+  background-color: blueviolet;
+}
+#fifth {
+  background-color: chartreuse;
+}
+#sixth {
+  background-color: red;
+}
+/*---------------------------------------------FORMS*/
+.form input,
+.form label,
+.form textarea,
+.form div,
+.form select {
+  /*this calls all the inputs, labels, textareas, divs and selects in the form class*/
+  margin-top: 5px;
+  /*this gives each of them space above*/
+}
+#img {
+  margin-top: 10px;
+  width: 60px;
+  height: auto;
+  /*when you are setting the height and width of an image 
+  you need either the width or the height to be auto
+  if you dont the image will loose its proportions*/
+}
+/*------------------------------------------------cursor*/
+.haha {
+  cursor: pointer;
+}
+.haha2 {
+  cursor: alias;
+}
+.haha4 {
+  cursor: auto;
+}
+.haha5 {
+  cursor: col-resize;
+}
+.haha6 {
+  cursor: cell;
+}
+.haha7 {
+  cursor: copy;
+}
+.haha8 {
+  cursor: no-drop;
+}
+.haha9 {
+  cursor: crosshair;
+}
+.haha10 {
+  cursor: default;
+}
+.haha11 {
+  cursor: e-resize;
+}
+.haha12 {
+  cursor: grab;
+}
+.haha13 {
+  cursor: grabbing;
+}
+.haha14 {
+  cursor: help;
+}
+.haha15 {
+  cursor: move;
+}
+.haha16 {
+  cursor: n-resize;
+}
+.haha17 {
+  cursor: ne-resize;
+}
+.haha18 {
+  cursor: progress;
+}
+.haha19 {
+  cursor: wait;
+}
+.haha20 {
+  cursor: zoom-in;
+}
+.haha21 {
+  cursor: zoom-out;
 }

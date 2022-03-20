@@ -4,89 +4,253 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webpack/Babel-demo</title>
+    <!--<link rel="icon" type="image/png" src="/src/smiley.png">-->
+    <!--this line normally puts the image in the href as the little image on the tab-->
+    <!--but that doesnt work in a SPA -->
+    <!--so instead i hav done it at the top of my javascript file-->
   </head>
 
   <body>
     <nav>
       <ul id="uls">
-        <li>Get all users</li>
-        <li>Get user by id</li>
-        <li>Get all hobbies</li>
-        <li>Get all zipcodes</li>
-        <li>Get users by zipcode</li>
-        <li>Get users by hobby</li>
-        <li>Delete user by id</li>
-        <li>Info</li>
+        <li>innerHTML</li>
+        <li>html and css</li>
+        <li>fetch</li>
+        <li>forms - getting info from html in js</li>
+        <li>dropdown</li>
+        <li>flex</li>
+        <li>grids</li>
       </ul>
     </nav>
     <section id="sections">
       <h1 id="hide">Welcome to my site</h1>
       <section>
-        <h2>Get all users</h2>
+        <h2>InnerHTML</h2>
+        <div id="divId">This is a div</div>
       </section>
       <section>
-        <h2>Get user by id</h2>
-        <label for="idPerson">select id</label>
-        <input type="number" id="idPerson" />
-        <button id="getByIdBtn" class="myBtn">get person</button>
-        <p id="errorText"></p>
+        <h2>HTML and CSS</h2>
+        <h1>
+          this is an h1 with no style, its best to only have one of these per
+          page
+        </h1>
+        <h2>this is an h2 with no style</h2>
+        <h3>this is an h3 with no style</h3>
+        <h4>this is an h4 with no style</h4>
+        <h5>this is an h5 with no style</h5>
+        <h6>this is an h6 with no style, there is no h7</h6>
+        <p>this is a p with no style</p>
+        <p>
+          those are the text containers, you can see that they are different
+          sizes and since there is no style you can see their natural sizes.</br></br>
+          As you can see there is a line break right before this line, i do that in the html with < / b r > just remove the spaces, br stands for break and you can use as many of them as you want</br> lines naturally break with every new container (p, h1-6...) <br/></br>
+          This is what a comment looks like in html < ! - - here goes the comment - - > <!-- here goes the comment --> just remove the spaces, <br/> to make a comment in css use /**/ and in javascript the comments are the same as in java<br/><br/>
+          If you want to change a part of the text you can use a <span style="font-weight: bold;">span tag</span> it looks like this < span > text goes here < / span > <br/><br/>
+          When you need to add a class or id in the html it looks like this < p id="firstID anotherID addAsManyIdsAsYouWant" class="aClass anotherClass addAsManyClassesAsYouWant" >< / p >
+        </p>
+        <h2>How to call a class, id or element selectors in css</h2>
+        <p>Class selectors:</br>
+            .className{}
+        </p>
+        <p>Id selectors:</br>
+          #idName{} (two things can not have the same id)
+      </p>
+      <p>Element selectors:</br>
+        element{} (everything in html that has an opening and closing tag like this < > < / > is an element selector)
+    </p>
+    <p>You can also call many at a time</br></br>
+      .className, #idName, span{}</br></br>
+      this will set all the styles to the elements className, idName, and all the span tags in the html document connected to the css file
+    </p>
+    <p>You can also use many selectors to choose something</br></br>
+      nav ul li {}</br></br>
+      this will get all the li that are in an ul and the ul is in the nav</br></br>
+      with this you can avoid effecting the other li that are inside the ul because they are not in the nav</br></br>
+      nav is short for navigationbar/ the links you use to get around on the web page</br></br>
+      ul stands for unordered list and li stands for list item</br></br>
+      there is another way to make lists and that is an ordered list, </br></br>
+      the only difference is that an ul has dots to mark list items, </br></br>
+      while ol uses numbers and it looks like this
+    </p>
+    <ol>
+      <li>ordered list item</li>
+      <li>ordered list item</li>
+      <li>ordered list item</li>
+    </ol>
+    <h2 id="hoverChange">Hover over this</h2>
+    <p>I made that happen by giving it an id like this id="hoverChange"</br></br>
+    then in the css i wrote</br></br>
+    #hoverChange:hover {</br></br>
+      font-size: 25px;</br></br>
+      color: blueviolet;</br></br>
+      background-color: aqua;</br></br>
+    }</br></br>
+    Anything you put inside {} will happen when you hover over the element
+    </p>
+    <hr>
+    <p>Right above this there is a line, i created it in html with < h r > without the spaces</p>
+    <p>now i want to mention a tags, they create a link and it looks like this < a href="https://www.google.com/" > < / a></br>
+    when you press that link the current webpage will change to google</p>
+    <p>if you want the link to open a new tab you add a target blank < a href="https://www.google.com/" target="_blank" > < / a></p></br>
+    <h3>hover the mouse over the following cursor lis</h3>
+    <ul>
+            <li class="haha">cursor: pointer;</li>
+            <li class="haha2">cursor: alias;</li>
+            <li class="haha4">cursor:auto;</li>
+            <li class="haha5">cursor: col-resize;</li>
+            <li class="haha6">cursor:cell;</li>
+            <li class="haha7">cursor: copy;</li>
+            <li class="haha8">cursor: no-drop;</li>
+            <li class="haha9">cursor: crosshair;</li>
+            <li class="haha10">cursor: default;</li>
+            <li class="haha11">cursor:e-resize;</li>
+            <li class="haha11">cursor:grab;</li>
+            <li class="haha13">cursor:grabbing;</li>
+            <li class="haha14">cursor:help;</li>
+            <li class="haha15">cursor:move;</li>
+            <li class="haha16">cursor:n-resize;</li>
+            <li class="haha17">cursor:ne-resize;</li>
+            <li class="haha18">cursor: progress;</li>
+            <li class="haha19">cursor: wait;</li>
+            <li class="haha20">cursor: zoom-in;</li>
+            <li class="haha21">cursor: zoom-out;</li>
+    </ul>
       </section>
       <section>
-        <h2>Get all hobbies</h2>
-      </section>
-      <section>
-        <h2>Get all zipcodes</h2>
-      </section>
-      <section>
-        <h2>Get users by zipcode</h2>
-        <label for="zipcode">select zipcode</label>
-        <input type="text" id="zipcode" />
-        <button id="getByzipcodeBtn" class="myBtn">
-          get people with a zipcode
-        </button>
-        <p id="errorTextzipcode"></p>
-      </section>
-      <section>
-        <h2>Get users by hobby</h2>
-        <label for="hobby">select hobby</label>
-        <input type="text" id="hobby" />
-        <button id="getByHobbyBtn" class="myBtn">
-          get people with a hobby
-        </button>
-        <p id="errorTextHobby"></p>
-      </section>
-      <section>
-        <h2>Delete user by id</h2>
+        <h2>Fetch</h2>
+        <p>The following crud is done using a free api</p>
+
+        <h3>Read (GET)</h3></br>
+        <a href="http://api.jokes.one/?ref=apilist.fun" target="_blank">this is a link to its documentation behind the following get</a></br>
+        <button id="getBtn" class="myBtn">Get all pokemons</button>
+        <button id="getBtnHide" class="myBtn">Hide get all pokemons</button>
+        <p id="errorTextGet"></p>
+        <div id="getContainer"></div>
+
+        <h3>Delete (DELETE) - this was made using our REST API</h3>
         <label for="idPerson">select id</label>
         <input type="number" id="idPersonDelete" />
         <button id="deleteByIdBtn" class="myBtn">delete person</button>
         <p id="errorTextDelete"></p>
+        
       </section>
       <section>
-      <br>
-        <a
-          href="https://docs.google.com/document/d/1k_gh6ZqJqJeeAuxcEQBtO_BrW1QFPFGUtAyYxIQQb_I/edit#heading=h.qgvkn31x7j8w" target="_blank"
-          
-          >Link to our API doc</a
-        ></br>
-        <a
-          href="https://docs.google.com/document/d/1W_WTjSEku8Eip5JNrf2IQhHTcNnHYRaNRcSTMTnkfVI/edit" target="_blank"
-          
-          >Link to our diary</a
-        ></br>
-        <a
-          href="https://docs.google.com/document/d/1q06J3V5oNjsnPUCu0Vgv2dHHAzm1OzYCr-l-7UTHiqQ/edit" target="_blank"
-          
-          >Link to our iteration plan with kanban, class diagram and ER
-          diagram</a
-        ></br>
-        <a href="https://github.com/Inga-Helgadottir/CA1" target="_blank">Github link backend</a></br>
-        <a href="https://github.com/Inga-Helgadottir/CA1-Frontend" target="_blank">Github link frontend</a>
+        <h2>forms - getting info from html in js</h2>
+        <h2>This is all the useful form stuff</h2>
+        <form method="GET" class="form">
+          <div class="error-message"></div></br>
+  <!-- name, the placeholder is text you can see in the input but when you write something in the input the placeholder disappears -->
+          <input name="name" class="form_input form__name" placeholder="First name">
+          <p></p></br>
+  <!-- email -->
+          <input type="email" name="email" class="form_input form__email" placeholder="Email">
+          <p></p></br>
+  <!-- number -->
+          <input type="number" name="number" class="form_input form__number" placeholder="Number">
+          <p></p></br>
+  <!-- textarea  the cols and rows deside how big the textarea should be-->
+          <textarea name="comment" cols="30" rows="10" class="form_input form__comment"></textarea>
+          <p></p></br>
+  <!-- checkbox -->
+          <div class="checkbox">
+                  <input type="checkbox" name="agree" class="form_input form__checkbox"></br>
+                  <label class="form__checkbox_label" for="agree">Do you agree?</label>
+          </div>
+          <p></p></br>
+  <!-- select -->
+          <select name="cars" class="form__select" form="carform">
+                  <option value="choose">Choose a car</option>
+                  <option value="volvo">Volvo</option>
+                  <option value="saab">Saab</option>
+                  <option value="opel">Opel</option>
+                  <option value="audi">Audi</option>
+          </select>
+          <p></p></br>
+  <!-- date -->
+          <input type="date" name="date" class="form_input form__date">
+          <p></p></br>
+  <!-- password -->
+          <input type="password" name="password" class="form_input form_password" placeholder="Password">
+          <p></p></br>
+  <!-- repeat password -->
+          <input type="password" name="password" class="form_input form_password2" placeholder="Repeat password">
+          <p></p></p></br>
+  <!-- submit button -->
+          <input type="submit" value="Submit" class="form__submit"></br>
+      </form>
+      <img src="" alt="" id="img">
+      <!--the src is the path from this html document to the image
+        the alt is for people using a screen reader (blind people)
+        usually i would add the src here but that doesnt work in a SPA
+        so instead i set the src in javascript-->
+      </section>
+      <section>
+        <h2>dropdown</h2>
+        <h2>Here are 2 different ways to make a drodown</h2>
+        <button id="dropdownBtn" class="myBtn">click here</button>
+        <div id="dropdownDiv" class="dropDown">
+                <p>this is what the javascript code looks like</p>
+                <p>let dropdown = document.querySelector("#dropdownBtn");</br>
+                let dropdownDiv = document.querySelector("#dropdownDiv");</br>
+                
+                dropdown.addEventListener("click", () => {</br>
+                        if (dropdownDiv.classList.contains("dropDown")) {</br>
+                        dropdownDiv.classList.remove("dropDown");</br>
+                        } else {</br>
+                        dropdownDiv.classList.add("dropDown");</br>
+                        }</br>
+                });</p>
+        </div></br>
+        <button id="dropdownBtn2" class="myBtn">click here 2</button>
+        <div id="dropdownDiv2" style="display: none;">
+                <p>this is what the javascript code looks like</p>
+                <p>let dropdown2 = document.querySelector("#dropdownBtn2");</br>
+                let dropdownDiv2 = document.querySelector("#dropdownDiv2");</br>
+                dropdown2.addEventListener("click", () => {</br>
+                        if (dropdownDiv2.style.display == "none") {</br>
+                        dropdownDiv2.style.display = "block";</br>
+                        } else {</br>
+                        dropdownDiv2.style.display = "none";</br>
+                }</br>
+                });</p>
+        </div>
+      </section>
+      <section>
+              <h3>flex</h3>
+              <p>to see how i did it look at the css file</p>
+              <ul id="flex1" class="flexClass">
+                      <li>this is</li>
+                      <li>justify-content</li>
+                      <li>space-around</li>
+              </ul>
+              <ul id="flex2" class="flexClass">
+                      <li>this is</li>
+                      <li>justify-content space-between</li>
+              </ul>
+              <ul id="flex3" class="flexClass">
+                      <li>this is</li>
+                      <li>justify-content</li>
+                      <li>space-evenly</li>
+              </ul>
+              <ul id="flex4" class="flexClass">
+                      <li>this is</li>
+                      <li>justify-content</li>
+                      <li>center</li>
+              </ul>
+      </section>
+      <section>
+              <h3>grids</h3>
+              <p>to see how i did it look at the css file</p>
+              
+              <div id="grid">
+                <div id="first"></div>
+                <div id="second"></div>
+                <div id="third"></div>
+                <div id="fourth"></div>
+                <div id="fifth"></div>
+                <div id="sixth"></div>
+              </div>
       </section>
     </section>
-
-    <!-- #################################################################-->
-    <!-- IMPORTANT  DO NOT IMPORT ANY JavaScript in this file by YOURSELF -->
-    <!-- #################################################################-->
   </body>
 </html>
