@@ -232,6 +232,14 @@ same as the one before exept it reverses the order of the items
   if you dont the image will loose its proportions*/
 }
 /*------------------------------------------------cursor*/
+/*
+to understand the following code 
+start the code and check the bottom of the html and css
+to start the code write 
+npm i
+when it is done write
+npm start
+*/
 .haha {
   cursor: pointer;
 }

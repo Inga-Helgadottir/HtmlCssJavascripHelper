@@ -16,7 +16,7 @@ if you want to add a javascript file you do it here with the other imports
 in order for that to work you need to add to the other javascript file
 export default functionName
 */
-/*
+/* to run the code write npm i then npm start
 Inhold:
 line 32 - favicon
 line 51 - setting up the page changer
