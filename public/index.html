@@ -27,7 +27,7 @@
       <h1 id="hide">Welcome to my site</h1>
       <section>
         <h2>InnerHTML</h2>
-        <div id="divId">This is a div</div>
+        <div id="divId">This is a div and the following links are paced here by innerHTML</div>
       </section>
       <section>
         <h2>HTML and CSS</h2>
@@ -63,7 +63,7 @@
       .className, #idName, span{}</br></br>
       this will set all the styles to the elements className, idName, and all the span tags in the html document connected to the css file
     </p>
-    <p>You can also use many selectors to choose something</br></br>
+    <p>You can also use many selectors to choose one thing, just remove the comma between them</br></br>
       nav ul li {}</br></br>
       this will get all the li that are in an ul and the ul is in the nav</br></br>
       with this you can avoid effecting the other li that are inside the ul because they are not in the nav</br></br>
@@ -90,9 +90,9 @@
     </p>
     <hr>
     <p>Right above this there is a line, i created it in html with < h r > without the spaces</p>
-    <p>now i want to mention a tags, they create a link and it looks like this < a href="https://www.google.com/" > < / a></br>
+    <p>now i want to mention a tags, they create a link and it looks like this < a href="https://www.google.com/" > link text here < / a></br>
     when you press that link the current webpage will change to google</p>
-    <p>if you want the link to open a new tab you add a target blank < a href="https://www.google.com/" target="_blank" > < / a></p></br>
+    <p>if you want the link to open a new tab you add a target blank < a href="https://www.google.com/" target="_blank" > link text here < / a></p></br>
     <h3>hover the mouse over the following cursor lis</h3>
     <ul>
             <li class="haha">cursor: pointer;</li>
@@ -105,7 +105,7 @@
             <li class="haha9">cursor: crosshair;</li>
             <li class="haha10">cursor: default;</li>
             <li class="haha11">cursor:e-resize;</li>
-            <li class="haha11">cursor:grab;</li>
+            <li class="haha12">cursor:grab;</li>
             <li class="haha13">cursor:grabbing;</li>
             <li class="haha14">cursor:help;</li>
             <li class="haha15">cursor:move;</li>
@@ -129,6 +129,7 @@
         <div id="getContainer"></div>
 
         <h3>Delete (DELETE) - this was made using our REST API</h3>
+        <p>REMEMBER this only works when you are running our CA1 project</p>
         <label for="idPerson">select id</label>
         <input type="number" id="idPersonDelete" />
         <button id="deleteByIdBtn" class="myBtn">delete person</button>
@@ -254,7 +255,7 @@
       </section>
       <section>
               <h3>tables</h3>
-              <p>this is what a table looks like</p>
+              <p>this is what a table looks like with no css</p>
               <table>
                 <tr>
                   <th>Person 1</th>
