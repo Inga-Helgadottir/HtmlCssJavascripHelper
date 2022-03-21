@@ -3,18 +3,17 @@ colors in css - https://www.google.com/search?q=color+picker&oq=colo&aqs=chrome.
 the link above is to a color picker, 
 you can choose any color of any brightness and get its hashcode value 
 this is how hashcodes work
-the numbers in the hashcode go from 0-9
-and then from a-f
+the numbers in the hashcode go from 0-9 and then from a-f
+#fff and #FFF give the same result
 there are either 3 or 6 numbers in a hashcode
 #RGB = Red, Green, Blue
-#RRGGBB
+#RRGGBB = Red, Red, Green, Green, Blue, Blue
 #fff and #ffffff give white
 #000 and # 000000 gives black
 #f00 and #ff0000 gives red
 when choosing a color you can also use
 blue, red, green...
 they just dont give as many options
-#
 */
 /*
 sizes in css
@@ -272,6 +271,9 @@ same as the one before exept it reverses the order of the items
 }
 /*------------------------------------------------cursor*/
 /*
+cursor means you mouse
+when setting the cursor means changing the way the mouse looks when you hover over the element
+you can change the cursor when hovering over anything (div, body, class, id...)
 to understand the following code 
 start the code and check the bottom of the html and css
 to start the code write the following in the terminal
@@ -348,7 +350,7 @@ npm start
 }
 /*------------------------------------------------transparent color*/
 .transparentColor {
-  background-color: rgba(0, 0, 255, 0.6);
+  background-color: rgba(0, 0, 255, 0.5);
   /*                       r  g   b    a
   this is another way to write a color
   rgb(); is red, green, blue
@@ -360,9 +362,10 @@ npm start
   rgb(0, 0, 255) is blue
   here i use rgba();
   the difference is that there should be 4 numbers inside rgba()
+  first the values for each color and then the value of a
   a stands for alpha and it makes the color transparent
-  0 == makes it invisible
-  1 == makes the color solid
+  0 makes it invisible
+  1 makes the color solid
   */
 }
 .redColor {
