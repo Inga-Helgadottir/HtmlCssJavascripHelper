@@ -26,8 +26,8 @@ line 264 - the difference between == and ===
 line 277 - useful little things
 line 298 - fetch 
 line 444 - dropdown
-line 502 - forms - getting info from html in js
-line 572 - tables
+line 503 - forms - getting info from html in js
+line 573 - tables
 */
 var link = document.createElement("link");
 //this means i want to create a link, witch is the tag for making a favicon
@@ -499,6 +499,7 @@ dropdownDiv2.style.margin = "5px 2px"; //margin: 5px 2px;
 dropdownDiv2.style.cursor = "pointer"; //cursor:pointer;
 dropdownDiv2.style.backgroundColor = "aqua"; //background-color: aqua;
 dropdownDiv2.style.paddingBottom = "2px"; //background-color: aqua;
+dropdownDiv2.style.width = "600px"; //width: 600px;
 //---------------------------------FORMS--------------------------------------------------------------------------
 let form = document.querySelector(".form");
 //here i get the form
