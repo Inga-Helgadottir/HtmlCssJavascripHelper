@@ -276,8 +276,10 @@ same as the one before exept it reverses the order of the items
   but i used grid-row and grid-column 
   to change where it should go
   if i wrote this
-  grid-column: 1 / span 2;
-  this element would fill two of the columns
+  grid-column: 2 / span 2;
+  this element would fill column 2 and 3
+  the same can be done with rows 
+  and you can span them as much as you want
   */
 }
 #second {
