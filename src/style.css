@@ -76,6 +76,9 @@ px, em, rem, %, pc, cm, mm...
   but margin:0 auto; centeres the element
   padding adds space inside the element
   margin adds space outside the element
+
+  in the browser when you hover over an item
+  green is padding ans orange is margin
   */
   overflow: scroll;
   /*
@@ -280,6 +283,14 @@ same as the one before exept it reverses the order of the items
 }
 #sixth {
   background-color: red;
+}
+
+.firstInSection {
+  padding-top: 70px;
+  /*
+  this is how i fixed the sticky nav problem
+  i gave the first header in all the sections this class 
+  */
 }
 /*---------------------------------------------FORMS*/
 .form input,
