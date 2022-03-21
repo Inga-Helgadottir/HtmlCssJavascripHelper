@@ -57,6 +57,11 @@ px, em, rem, %, pc, cm, mm...
   border-left-width: 1px;
   border-left-color: #000;
 
+  border-radius: 5px;
+  /*
+  border radius rounds out the border corners
+  */
+
   padding: 5px;
   /*
   padding is what is sounds like, it makes space
@@ -93,6 +98,28 @@ px, em, rem, %, pc, cm, mm...
   /*
   centers texts and only text
   */
+  letter-spacing: 5px;
+  /*
+  the space between letters
+  */
+  word-spacing: 2px;
+  /*
+  space between words
+  */
+  box-shadow: 5px 10px;
+  box-shadow: 5px 10px red;
+  box-shadow: 5px 10px 5px;
+  box-shadow: 5px 10px 5px 2px;
+  box-shadow: 5px 10px 5px 2px red;
+
+  text-shadow: 2px 2px;
+  text-shadow: 2px 2px red;
+  text-shadow: 2px 2px 2px red;
+
+  line-height: 0.8;
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
   text-decoration: underline;
   text-decoration: line-through;
   background-color: #4caf50;
@@ -377,4 +404,32 @@ npm start
   color: #fff;
   text-align: center;
   margin: 5px;
+}
+/*------------------------------------------------sticky nav*/
+.sticky {
+  position: fixed;
+  /*
+  this says that i would like to stick my nav at the top of the page
+  */
+  width: 100%;
+  /*
+  you need to add width here because the position fixed messes with the navs width
+  */
+}
+/*
+this code makes it so that the nav bar sticks to the top of the page 
+no matter how far down you scroll
+*/
+/*------------------------------------------------media queries*/
+@media only screen and (max-width: 480px) {
+  #hide {
+    background-color: lightgreen;
+  }
+  /*
+  when the screen is 480px or less in width,
+  the background color of my id turns lightgreen
+  you can have a milion lines inside @media only screen and (max-width: 480px) {
+  you can also use @media only screen and (min-width: 480px) {
+  that means that when the screen is 480px or wider everything inside it will happen
+  */
 }

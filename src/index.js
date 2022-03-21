@@ -18,16 +18,17 @@ export default functionName
 */
 /* to run the code write npm i then npm start in the terminal
 Inhold:
-line 32 - favicon
-line 51 - setting up the page changer
-line 201 - innerHTML
-line 229 - doing something when a key is pressed
-line 264 - the difference between == and ===
-line 277 - useful little things
-line 298 - fetch 
-line 444 - dropdown
-line 503 - forms - getting info from html in js
-line 573 - tables
+line 33 - favicon
+line 52 - setting up the page changer
+line 202 - innerHTML
+line 230 - doing something when a key is pressed
+line 265 - the difference between == and ===
+line 278 - useful little things
+line 299 - fetch 
+line 445 - dropdown
+line 504 - forms - getting info from html in js
+line 574 - tables
+line 615 - running a function after a given time
 */
 var link = document.createElement("link");
 //this means i want to create a link, witch is the tag for making a favicon
@@ -611,3 +612,18 @@ function fillTableFunction() {
       });
     });
 }
+//---------------------------------RUNNING A FUNCTION AFTER A SURTON TIME--------------------------------------------------------------------------
+let alertBtn = document.querySelector("#timeOutBtn");
+
+alertBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    alert("I am an alert box!");
+  }, 2000);
+  /*
+  setTimeout means i want to wait before running the code inside
+  everything inside {} will run after 2 seconds
+  because of the 2000 number (it is written in milliseconds)
+  alert("I am an alert box!"); 
+  makes an alert box appear with the text "I am an alert box!" written on it
+  */
+});

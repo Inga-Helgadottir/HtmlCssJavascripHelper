@@ -9,9 +9,22 @@
     <!--but that doesnt work in a SPA -->
     <!--so instead i hav done it at the top of my javascript file-->
   </head>
+<!--
+  USEFUL INFO: if you write lorem in a text field and then press enter 
+  you will get a lorem ipsum text
+  a lorem ipsum text is just a dummy text that looks like this:
 
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  Soluta minima, magni ipsum iusto perferendis ad molestiae 
+  impedit dolores hic optio saepe totam provident accusamus 
+  nemo rem cumque debitis est ipsam!
+
+  you can also write lorem followed by a number and you will get a lorem ipsum text
+  with the number of words matching the number you wrote after lorem
+  lorem5 will give you: Lorem ipsum dolor sit amet.
+-->
   <body>
-    <nav>
+    <nav class="sticky">
       <ul id="uls">
         <li>innerHTML</li>
         <li>html and css</li>
@@ -21,6 +34,7 @@
         <li>flex</li>
         <li>grids</li>
         <li>tables</li>
+        <li>running a function after a given time</li>
       </ul>
     </nav>
     <section id="sections">
@@ -312,6 +326,11 @@
                     <th>age</th>
                   </tr>
                 </table>
+      </section>
+      <section>
+        <button id="timeOutBtn" class="myBtn">
+          3 seconds after this button is clicked an alert box will pop up
+        </button>
       </section>
     </section>
   </body>
