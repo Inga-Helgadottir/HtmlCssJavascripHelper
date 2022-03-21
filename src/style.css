@@ -312,3 +312,10 @@ npm start
 .haha21 {
   cursor: zoom-out;
 }
+/*------------------------------------------------padding, margin, border*/
+.pmb {
+  border: solid 2px #000;
+  padding: 5px;
+  margin: 10px;
+  width: 239px;
+}

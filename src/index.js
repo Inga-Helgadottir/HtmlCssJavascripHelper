@@ -26,8 +26,8 @@ line 264 - the difference between == and ===
 line 277 - useful little things
 line 298 - fetch 
 line 444 - dropdown
-line 491 - forms - getting info from html in js
-line 561 - tables
+line 502 - forms - getting info from html in js
+line 572 - tables
 */
 var link = document.createElement("link");
 //this means i want to create a link, witch is the tag for making a favicon
@@ -488,6 +488,17 @@ dropdown2.addEventListener("click", () => {
     //if not it hides it
   }
 });
+// examples of other styles you can affect-----in css
+/* 
+you can add any style in javascript
+if the style looks like this in css background-color
+it becomes camelcase: backgroundColor
+ */
+dropdownDiv2.style.border = "solid 2px #000"; //border:solid 2px #000;
+dropdownDiv2.style.margin = "5px 2px"; //margin: 5px 2px;
+dropdownDiv2.style.cursor = "pointer"; //cursor:pointer;
+dropdownDiv2.style.backgroundColor = "aqua"; //background-color: aqua;
+dropdownDiv2.style.paddingBottom = "2px"; //background-color: aqua;
 //---------------------------------FORMS--------------------------------------------------------------------------
 let form = document.querySelector(".form");
 //here i get the form
