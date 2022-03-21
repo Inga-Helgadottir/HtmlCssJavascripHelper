@@ -76,6 +76,14 @@ px, em, rem, %, pc, cm, mm...
   but margin:0 auto; centeres the element
   padding adds space inside the element
   margin adds space outside the element
+  if you have margin, padding and a border on something it woould look like this
+  margin
+    border
+      padding
+        element
+      padding
+    border
+  margin
 
   in the browser when you hover over an item
   green is padding ans orange is margin
