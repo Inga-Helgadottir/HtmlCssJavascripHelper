@@ -24,7 +24,7 @@ your most common options to set the size are
 px, em, rem, %, pc, cm, mm...
 */
 .theMostImportantCssStyles {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Times New Roman", Times, serif;
   /*this chooses the font family*/
   font-weight: bold;
   /*makes the text bold, you can also choose bolder or a number in the 100*/
@@ -37,7 +37,27 @@ px, em, rem, %, pc, cm, mm...
   the other options are dashed, dotted, double, groove...
   2px is the with of the border
   #000 is the color of the border
+
+  the following 3 lines do the same thing 
+  as the line above this comment
   */
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+  /*
+  you can also give a border to one side
+  */
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+  border-right: solid 1px #000;
+  border-left: solid 1px #000;
+  /*
+  this is how you set each value when your border is only on one side
+  */
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #000;
+
   padding: 5px;
   /*
   padding is what is sounds like, it makes space
@@ -325,4 +345,33 @@ npm start
   padding: 5px;
   margin: 10px;
   width: 13%;
+}
+/*------------------------------------------------transparent color*/
+.transparentColor {
+  background-color: rgba(0, 0, 255, 0.6);
+  /*                       r  g   b    a
+  this is another way to write a color
+  rgb(); is red, green, blue
+  and inside there should be 3 numbers between 0 and 255
+  rgb(255, 255, 255) is white
+  rgb(0, 0, 0) is black
+  rgb(255, 0, 0) is red
+  rgb(0, 255, 0) is green
+  rgb(0, 0, 255) is blue
+  here i use rgba();
+  the difference is that there should be 4 numbers inside rgba()
+  a stands for alpha and it makes the color transparent
+  0 == makes it invisible
+  1 == makes the color solid
+  */
+}
+.redColor {
+  background-color: red;
+}
+.both {
+  width: 400px;
+  height: 200px;
+  color: #fff;
+  text-align: center;
+  margin: 5px;
 }
