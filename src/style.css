@@ -185,6 +185,10 @@ section h2 {
   this is an id so it overwrites that backgound color
   */
 }
+#hide {
+  padding-top: 79px;
+  margin: 0;
+}
 
 /*---------------------------------------------DROPDOWN*/
 .dropDown {
@@ -420,6 +424,34 @@ npm start
 this code makes it so that the nav bar sticks to the top of the page 
 no matter how far down you scroll
 */
+/*------------------------------------------------postiton*/
+.relative {
+  position: relative;
+  /*
+  this is a way to say that when i say position: absolute;
+  it knows that i want it to be inside this one
+  */
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73ad21;
+}
+
+.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  /*
+  top and right tell this div where inside the position relative
+  this div should be placed
+  you can also use left and bottom
+  if you do not have a position: relative; on the container of the one who has position: absolute;
+  then this ones position can be anywhere in the html document
+  if you remove the position: relative; from the other one this box will jump near the top of the site
+  */
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73ad21;
+}
 /*------------------------------------------------media queries*/
 @media only screen and (max-width: 480px) {
   #hide {
