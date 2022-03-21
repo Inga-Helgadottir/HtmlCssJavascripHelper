@@ -275,6 +275,9 @@ same as the one before exept it reverses the order of the items
   because it is the first element in the grid
   but i used grid-row and grid-column 
   to change where it should go
+  if i wrote this
+  grid-column: 1 / span 2;
+  this element would fill two of the columns
   */
 }
 #second {
