@@ -250,7 +250,8 @@ document.addEventListener("keydown", (event) => {
 /*
 this function listens for every time you press a key
 event.keyCode
-event is just a way to tell the function to look at whats happening and the only way we can find the keyCode 
+event is just a way to tell the function to send info about whats happening 
+and it is the only way we can find the keyCode 
 keyCode is the id of the key
 */
 /*
