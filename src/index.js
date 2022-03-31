@@ -674,7 +674,7 @@ Array(3) [ "Write for Envato Tuts+", "Work out", "Procrastinate on Duolingo" ]
 //---------------------------------FILTER--------------------------------------------------------------------------
 const ages = [32, 33, 16, 40];
 const result = ages.filter(checkAdult);
-/* filter does exactly the what you think it filters an array/object
+/* filter does exactly the what you think, it filters an array/object
 here i send each of the ages values to the checkAdult function
 that function just checks if the number is below or equal to 18
 if it is it gets added to the result array
