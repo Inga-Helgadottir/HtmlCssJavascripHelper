@@ -628,3 +628,71 @@ alertBtn.addEventListener("click", () => {
   makes an alert box appear with the text "I am an alert box!" written on it
   */
 });
+//---------------------------------MAP--------------------------------------------------------------------------
+let mapArray = [2, 3, 6, 5, 7];
+console.log("mapArray");
+console.log(mapArray);
+let mapArrayAfter = mapArray.map(myFunction);
+/*
+this line maps the array
+that means that for every item in the array
+it calls a myFunction
+myFunction just multiplies every item with 10
+*/
+function myFunction(num) {
+  return num * 10;
+}
+console.log("mapArrayAfter");
+console.log(mapArrayAfter);
+// mapArrayAfter = [20, 30, 60, 50, 70];
+
+const tasks = [
+  {
+    name: "Write for Envato Tuts+",
+    duration: 120,
+  },
+  {
+    name: "Work out",
+    duration: 60,
+  },
+  {
+    name: "Procrastinate on Duolingo",
+    duration: 240,
+  },
+];
+const task_names = tasks.map((task) => task.name);
+/*
+here i am making an array out of just the names in my tasks array
+*/
+console.log("tasks");
+console.log(tasks);
+console.log("task_names");
+console.log(task_names);
+/* this is what the task_names looks like in the console
+Array(3) [ "Write for Envato Tuts+", "Work out", "Procrastinate on Duolingo" ]
+*/
+//---------------------------------FILTER--------------------------------------------------------------------------
+const ages = [32, 33, 16, 40];
+const result = ages.filter(checkAdult);
+/* filter does exactly the what you think it filters an array/object
+here i send each of the ages values to the checkAdult function
+that function just checks if the number is below or equal to 18
+if it is it gets added to the result array
+that is why the result array looks like this
+Array(3) [ 32, 33, 40 ]
+*/
+function checkAdult(age) {
+  return age >= 18;
+}
+
+console.log("ages");
+console.log(ages);
+/* this is ages
+Array(4) [ 32, 33, 16, 40 ]
+*/
+
+console.log("result");
+console.log(result);
+/* this is result
+Array(3) [ 32, 33, 40 ]
+*/
