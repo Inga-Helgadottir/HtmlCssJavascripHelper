@@ -300,10 +300,6 @@ same as the one before exept it reverses the order of the items
 
 .firstInSection {
   padding-top: 70px;
-  /*
-  this is how i fixed the sticky nav problem
-  i gave the first header in all the sections this class 
-  */
 }
 /*---------------------------------------------FORMS*/
 .form input,
@@ -311,31 +307,14 @@ same as the one before exept it reverses the order of the items
 .form textarea,
 .form div,
 .form select {
-  /*this calls all the inputs, labels, textareas, divs and selects in the form class*/
   margin-top: 5px;
-  /*this gives each of them space above*/
 }
 #img {
   margin-top: 10px;
   width: 60px;
   height: auto;
-  /*
-  when you are setting the height and width of an image 
-  you need either the width or the height to be auto
-  if you dont the image will loose its proportions*/
 }
 /*------------------------------------------------cursor*/
-/*
-cursor means you mouse
-when setting the cursor means changing the way the mouse looks when you hover over the element
-you can change the cursor when hovering over anything (div, body, class, id...)
-to understand the following code 
-start the code and check the bottom of the html and css
-to start the code write the following in the terminal
-npm i
-when it is done write
-npm start
-*/
 .haha {
   cursor: pointer;
 }
@@ -406,22 +385,6 @@ npm start
 /*------------------------------------------------transparent color*/
 .transparentColor {
   background-color: rgba(0, 0, 255, 0.5);
-  /*                       r  g   b    a
-  this is another way to write a color
-  rgb(); is red, green, blue
-  and inside there should be 3 numbers between 0 and 255
-  rgb(255, 255, 255) is white
-  rgb(0, 0, 0) is black
-  rgb(255, 0, 0) is red
-  rgb(0, 255, 0) is green
-  rgb(0, 0, 255) is blue
-  here i use rgba();
-  the difference is that there should be 4 numbers inside rgba()
-  first the values for each color and then the value of a
-  a stands for alpha and it makes the color transparent
-  0 makes it invisible
-  1 makes the color solid
-  */
 }
 .redColor {
   background-color: red;
@@ -436,25 +399,11 @@ npm start
 /*------------------------------------------------sticky nav*/
 .sticky {
   position: fixed;
-  /*
-  this says that i would like to stick my nav at the top of the page
-  */
   width: 100%;
-  /*
-  you need to add width here because the position fixed messes with the navs width
-  */
 }
-/*
-this code makes it so that the nav bar sticks to the top of the page 
-no matter how far down you scroll
-*/
 /*------------------------------------------------postiton*/
 .relative {
   position: relative;
-  /*
-  this is a way to say that when i say position: absolute;
-  it knows that i want it to be inside this one
-  */
   width: 400px;
   height: 200px;
   border: 3px solid #73ad21;
@@ -465,12 +414,8 @@ no matter how far down you scroll
   top: 80px;
   right: 0;
   /*
-  top and right tell this div where inside the position relative
-  this div should be placed
-  you can also use left and bottom
-  if you do not have a position: relative; on the container of the one who has position: absolute;
-  then this ones position can be anywhere in the html document
-  if you remove the position: relative; from the other one this box will jump near the top of the site
+  top, left, bottom og right kan kun bruges i en container med position: absolute;
+  som har en container med position: relative;
   */
   width: 200px;
   height: 100px;
@@ -481,11 +426,4 @@ no matter how far down you scroll
   #hide {
     background-color: lightgreen;
   }
-  /*
-  when the screen is 480px or less in width,
-  the background color of my id turns lightgreen
-  you can have a milion lines inside @media only screen and (max-width: 480px) {
-  you can also use @media only screen and (min-width: 480px) {
-  that means that when the screen is 480px or wider everything inside it will happen
-  */
 }

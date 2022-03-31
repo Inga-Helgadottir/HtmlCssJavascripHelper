@@ -351,9 +351,14 @@ function getAllPokemons() {
       console.log("result.results[1].name : ");
       console.log(result.results[1].name);
       for (let i = 0; i < result.results.length; i++) {
-        inputInfoHere.innerHTML += `<h3>Pokemon name: ${result.results[i].name}</h3></br>
-         <p>Pokemon url: ${result.results[i].url}</p>
-        `;
+        // inputInfoHere.innerHTML += `<h3>Pokemon name: ${result.results[i].name}</h3></br>
+        //  <p>Pokemon url: ${result.results[i].url}</p>
+        // `;
+        if (result.results[i].name == "metapod") {
+          console.log("HERE--------------");
+          console.log(result.results[i].name);
+          console.log(result.results[i].url);
+        }
       }
     });
 }

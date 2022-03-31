@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--lang stands for language, for danish lang="en"
-for any other language check
-https://www.w3schools.com/tags/ref_language_codes.asp -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webpack/Babel-demo</title>
-    <!--<link rel="icon" type="image/png" src="/src/smiley.png">-->
-    <!--this line normally puts the image in the href as the little image on the tab-->
-    <!--but that doesnt work in a SPA -->
-    <!--so instead i hav done it at the top of my javascript file-->
   </head>
-<!--
-  USEFUL INFO: 
-  to start the project write this in the terminal
-  npm i 
-  then
-  npm start
-  
-  if you write lorem in a text field and then press enter 
-  you will get a lorem ipsum text
-  a lorem ipsum text is just a dummy text that looks like this:
-
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-  Soluta minima, magni ipsum iusto perferendis ad molestiae 
-  impedit dolores hic optio saepe totam provident accusamus 
-  nemo rem cumque debitis est ipsam!
-
-  you can also write lorem followed by a number and you will get a lorem ipsum text
-  with the number of words matching the number you wrote after lorem
-  lorem5 will give you: Lorem ipsum dolor sit amet.
--->
   <body>
     <nav class="sticky">
       <ul id="uls">
@@ -173,25 +146,19 @@ https://www.w3schools.com/tags/ref_language_codes.asp -->
         <h2>This is all the useful form stuff</h2>
         <form method="GET" class="form">
           <div class="error-message"></div></br>
-  <!-- name, the placeholder is text you can see in the input but when you write something in the input the placeholder disappears -->
           <input name="name" class="form_input form__name" placeholder="First name">
           <p></p></br>
-  <!-- email -->
           <input type="email" name="email" class="form_input form__email" placeholder="Email">
           <p></p></br>
-  <!-- number -->
           <input type="number" name="number" class="form_input form__number" placeholder="Number">
           <p></p></br>
-  <!-- textarea  the cols and rows deside how big the textarea should be-->
           <textarea name="comment" cols="30" rows="10" class="form_input form__comment"></textarea>
           <p></p></br>
-  <!-- checkbox -->
           <div class="checkbox">
                   <input type="checkbox" name="agree" class="form_input form__checkbox"></br>
                   <label class="form__checkbox_label" for="agree">Do you agree?</label>
           </div>
           <p></p></br>
-  <!-- select -->
           <select name="cars" class="form__select" form="carform">
                   <option value="choose">Choose a car</option>
                   <option value="volvo">Volvo</option>
@@ -200,23 +167,15 @@ https://www.w3schools.com/tags/ref_language_codes.asp -->
                   <option value="audi">Audi</option>
           </select>
           <p></p></br>
-  <!-- date -->
           <input type="date" name="date" class="form_input form__date">
           <p></p></br>
-  <!-- password -->
           <input type="password" name="password" class="form_input form_password" placeholder="Password">
           <p></p></br>
-  <!-- repeat password -->
           <input type="password" name="password" class="form_input form_password2" placeholder="Repeat password">
           <p></p></p></br>
-  <!-- submit button -->
           <input type="submit" value="Submit" class="form__submit"></br>
       </form>
       <img src="" alt="" id="img">
-      <!--the src is the path from this html document to the image
-        the alt is for people using a screen reader (blind people)
-        usually i would add the src here but that doesnt work in a SPA
-        so instead i set the src in javascript-->
       </section>
       <section>
         <h2 class="firstInSection">dropdown</h2>
