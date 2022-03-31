@@ -637,7 +637,7 @@ let mapArrayAfter = mapArray.map(myFunction);
 this line maps the array
 that means that for every item in the array
 it calls myFunction
-myFunction just multiplies every item with 10
+myFunction just multiplies every item in the array with 10
 */
 function myFunction(num) {
   return num * 10;
