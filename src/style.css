@@ -465,11 +465,14 @@ no matter how far down you scroll
   top: 80px;
   right: 0;
   /*
-  top, left, bottom og right kan kun bruges i en container med position: absolute;
-  som har en container med position: absolute;
-
-  top and right tell this div where inside the position relative
-  this div should be placed
+  top, left, bottom og right kan kun bruges hvis den har position: absolute;
+  this is what the html looks like :
+  <div class="relative">This div element has position: relative;
+    <div class="absolute">This div element has position: absolute;</div>
+  </div>
+  top and right tell this div where inside the position relative div,
+  the div with position: absolute; should be placed
+  
   you can also use left and bottom
   if you do not have a position: relative; on the container of the one who has position: absolute;
   then this ones position can be anywhere in the html document
