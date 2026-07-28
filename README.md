@@ -1,3 +1,23 @@
+# This project has extensive notes on HTML, CSS and JavaScript
+
+[HTML notes](https://github.com/Inga-Helgadottir/HtmlCssJavascripHelper/blob/main/public/index.html)
+[CSS notes](https://github.com/Inga-Helgadottir/HtmlCssJavascripHelper/blob/main/src/style.css)
+[JavaScript notes](https://github.com/Inga-Helgadottir/HtmlCssJavascripHelper/blob/main/src/index.js)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+---
+
+---
+
+---
+
+# Original text generated when I created the project
+
 # Simple template to create SPA's with plain JavaScript using Babel, Webpack and Webpacks devserver
 
 ## Getting started
