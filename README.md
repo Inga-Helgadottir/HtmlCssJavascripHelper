@@ -1,16 +1,12 @@
 # This project has extensive notes on HTML, CSS and JavaScript
 
 [HTML notes](https://github.com/Inga-Helgadottir/HtmlCssJavascripHelper/blob/main/public/index.html)
-<br/>
+<br/><br/>
 [CSS notes](https://github.com/Inga-Helgadottir/HtmlCssJavascripHelper/blob/main/src/style.css)
-<br/>
+<br/><br/>
 [JavaScript notes](https://github.com/Inga-Helgadottir/HtmlCssJavascripHelper/blob/main/src/index.js)
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<br/><br/><br/><br/><br/>
 
 ---
 
