@@ -23,35 +23,46 @@ your most common options to set the size are
 px, em, rem, %, pc, cm, mm...
 */
 .theMostImportantCssStyles {
-  font-family: "Times New Roman", Times, serif;
-  /*this chooses the font family*/
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;  
+  text-align: center;  /*  centers texts   */
   font-weight: bold;
-  /*makes the text bold, you can also choose bolder or a number in the 100*/
-  color: blue;
-  /*the color of the text in this container*/
+  /*
+  Makes the text bold, you can also choose bolder or a number in the 100's
+  */
+  
+  line-height: 1.8;  /*  Space between lines  */
+  
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
+  
+  text-decoration: underline;
+  text-decoration: line-through;
+  
+  color: blue; /*  Text color  */
+  background-color: #4caf50;
   border: solid 1px #000;
   /*
-  border needs to have those three variables
-  solid is the type of line you want
-  the other options are dashed, dotted, double, groove...
+  A border needs to have those three variables
+  solid is the type of line you want (the other options are dashed, dotted, double, groove...)
   2px is the with of the border
   #000 is the color of the border
 
-  the following 3 lines do the same thing 
-  as the line above this comment
+  the following 3 lines do the same thing as the line above this comment
   */
   border-style: solid;
   border-width: 1px;
   border-color: #000;
   /*
-  you can also give a border to one side
+  You can also customize each side of the border
   */
   border-top: solid 1px #000;
   border-bottom: solid 1px #000;
   border-right: solid 1px #000;
   border-left: solid 1px #000;
   /*
-  this is how you set each value when your border is only on one side
+  You can also set each sides values like this
   */
   border-left-style: solid;
   border-left-width: 1px;
@@ -59,7 +70,7 @@ px, em, rem, %, pc, cm, mm...
 
   border-radius: 5px;
   /*
-  border radius rounds out the border corners
+  border radius controls the border corners, the higher the number the more rounded the corners get
   */
 
   padding: 5px;
@@ -76,7 +87,7 @@ px, em, rem, %, pc, cm, mm...
   but margin:0 auto; centeres the element
   padding adds space inside the element
   margin adds space outside the element
-  if you have margin, padding and a border on something it woould look like this
+  if you have margin, padding and a border on something it would look like this
   margin
     border
       padding
@@ -84,61 +95,50 @@ px, em, rem, %, pc, cm, mm...
       padding
     border
   margin
-
-  in the browser when you hover over an item
-  green is padding ans orange is margin
   */
+  
   overflow: scroll;
   /*
   creates a scroll bar on that element
   */
+  
   overflow: hidden;
   /*
   hides the overflow
-  while overflow: visible; does the opposite
+  while overflow: visible; overwrites it
   */
-  display: none;
-  /*
-  hides the element
-  */
-  display: block;
-  /*
-  makes the element visable again
-  */
-  text-align: center;
-  /*
-  centers texts and only text
-  */
-  letter-spacing: 5px;
-  /*
-  the space between letters
-  */
-  word-spacing: 2px;
-  /*
-  space between words
-  */
+  
+  display: none;  /*  hides the element  */
+  display: block;  /*  overwrites all other displays  */
+  
+  letter-spacing: 5px;  /*  the space between letters  */
+  word-spacing: 2px;  /*  space between words  */
+  
   box-shadow: 5px 10px;
   box-shadow: 5px 10px red;
   box-shadow: 5px 10px 5px;
   box-shadow: 5px 10px 5px 2px;
-  box-shadow: 5px 10px 5px 2px red;
+  box-shadow: 5px 10px 5px 2px #f00;
+  /*
+  Adds a shaddow to the container
+  The values follow the same pattern as padding and margin
+  box-shadow: allSides;
+  box-shadow: topANDbottom leftANDright;
+  box-shadow: top right bottom left;
 
+  If you want a different color than black for your shadow, you add the color at the end
+  */
+  
   text-shadow: 2px 2px;
   text-shadow: 2px 2px red;
   text-shadow: 2px 2px 2px red;
-
-  line-height: 0.8;
-  text-transform: uppercase;
-  text-transform: lowercase;
-  text-transform: capitalize;
-  text-decoration: underline;
-  text-decoration: line-through;
-  background-color: #4caf50;
-  font-size: 15px;
+  /*
+  text-shadow is the same as box-shadow but for text
+  */
 }
 
 #hoverChange:hover {
-  /*this is how you change things when the mouse hovers over the element*/
+  /* This is how you change things on hover */
   font-size: 25px;
   color: blueviolet;
   background-color: aqua;
@@ -147,10 +147,10 @@ px, em, rem, %, pc, cm, mm...
 ul {
   list-style-type: none;
   /*
-  removes the dots/numbers in from of every list item (li)
+  removes the bullet points in from of every list item (li)
   it must be placed on a ul or an ol
-  you can do the same to remove numbers from the ol list items
   */
+  
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -158,7 +158,7 @@ ul {
 }
 
 ul li {
-  float: left;
+  float: left; /* positions elements to the left */
 }
 
 ul li {
@@ -168,8 +168,13 @@ ul li {
   padding: 14px 16px;
   cursor: pointer;
 }
+
 ul li a:hover:not(.active) {
   background-color: #111;
+  /*
+  This changes the background color of the link inside the li on hover
+  but only if that li does not the currently have the class active
+  */
 }
 
 .selected {
@@ -196,36 +201,46 @@ section h2 {
   this is an id so it overwrites that backgound color
   */
 }
+
 #hide {
   padding-top: 79px;
   margin: 0;
 }
 
-/*---------------------------------------------DROPDOWN*/
+/*---------------------------------------------DROPDOWN */
 .dropDown {
   display: none;
 }
-/*---------------------------------------------FLEX*/
+/*---------------------------------------------FLEX */
 .flexClass {
   display: flex;
-  /*flex doesnt work unless you have display:flex;*/
+  /*
+  Turns on flex in the container
+  */
+  
   margin-right: 22px;
-  /*creates space on the outside of the right side of the element*/
 }
+
 #flex1 {
   justify-content: space-around;
+  /*
+  justify-content, sets how the elements are arranged on the page
+  */
 }
+
 #flex2 {
   justify-content: space-between;
 }
+
 #flex3 {
   justify-content: space-evenly;
 }
+
 #flex4 {
   justify-content: center;
 }
 /*
-you can also use a ting called flex-direction
+you can also use flex-direction to choose what direction the elements are arranged
 the options are: 
 flex-direction: column;
 sets each item under the next
@@ -239,39 +254,47 @@ sets them in a row next to each other
 flex-direction: row-reverse;
 same as the one before exept it reverses the order of the items
 */
-/*---------------------------------------------GRID*/
+
+/*---------------------------------------------GRID */
 #grid {
   display: grid;
-  /*grids wont work unless you have display:grid;*/
-  grid-template-columns: 33% 33% 33%;
-  /*this creates the columns*/
-  grid-template-rows: 50% 50%;
-  /*this creates the rows*/
+  /*
+  Turns the container into a grid
+  */
+  
+  grid-template-columns: 33% 33% 33%; /*  this creates the columns  */
+  grid-template-rows: 50% 50%;  /*  this creates the rows  */
   /*
   here i use % to tell the grid how it should look
-  but you can also use px              
+  but you can also use px, em...              
   */
+  
   width: 1000px;
   height: 300px;
-  /*here i set the height and width of the grid itself
+  /*
+  here I set the height and width of the grid itself
   usually you dont need to do that 
   but all of the items are empty divs
-  since i used % to make my grid rows and columns
+  since I used % to make my grid rows and columns
   the grid doesnt know how much space it has
   */
 }
-#grid div {
-  /*this gets every div inside the div with the id grid*/
+
+#grid div {  /*  this gets every div inside the div with the id grid  */
   width: 100%;
   height: 100%;
-  /*here i set the height and width of each of the items in the grid
-  so that it fills the entire cell*/
+  /*
+  here i set the height and width of each of the items in the grid
+  so that it fills the entire cell
+  */
 }
+
 #first {
   background-color: #4caf50;
   grid-row: 2;
   grid-column: 2;
-  /*usually this div would go in the first cell
+  /*
+  As a default this div would go in the first cell
   because it is the first element in the grid
   but i used grid-row and grid-column 
   to change where it should go
@@ -282,18 +305,23 @@ same as the one before exept it reverses the order of the items
   and you can span them as much as you want
   */
 }
+
 #second {
   background-color: aqua;
 }
+
 #third {
   background-color: blue;
 }
+
 #fourth {
   background-color: blueviolet;
 }
+
 #fifth {
   background-color: chartreuse;
 }
+
 #sixth {
   background-color: red;
 }
@@ -305,16 +333,20 @@ same as the one before exept it reverses the order of the items
   i gave the first header in all the sections this class 
   */
 }
-/*---------------------------------------------FORMS*/
+
+/*---------------------------------------------FORMS */
 .form input,
 .form label,
 .form textarea,
 .form div,
 .form select {
-  /*this calls all the inputs, labels, textareas, divs and selects in the form class*/
-  margin-top: 5px;
-  /*this gives each of them space above*/
+  /*
+  this calls all the inputs, labels, textareas, divs and selects in the form class
+  */
+  
+  margin-top: 5px;  /*  this gives each of them space above  */
 }
+
 #img {
   margin-top: 10px;
   width: 60px;
@@ -322,12 +354,13 @@ same as the one before exept it reverses the order of the items
   /*
   when you are setting the height and width of an image 
   you need either the width or the height to be auto
-  if you dont the image will loose its proportions*/
+  to keep the proportions correct
+  */
 }
+
 /*------------------------------------------------cursor*/
 /*
-cursor means you mouse
-when setting the cursor means changing the way the mouse looks when you hover over the element
+cursor means your mouse on the screen
 you can change the cursor when hovering over anything (div, body, class, id...)
 to understand the following code 
 start the code and check the bottom of the html and css
@@ -335,6 +368,8 @@ to start the code write the following in the terminal
 npm i
 when it is done write
 npm start
+
+or check out the options here: https://www.w3schools.com/cssref/pr_class_cursor.php
 */
 .haha {
   cursor: pointer;
@@ -396,17 +431,19 @@ npm start
 .haha21 {
   cursor: zoom-out;
 }
-/*------------------------------------------------padding, margin, border*/
+
+/*------------------------------------------------padding, margin, border */
 .pmb {
   border: solid 2px #000;
   padding: 5px;
   margin: 10px;
   width: 13%;
 }
-/*------------------------------------------------transparent color*/
+
+/*------------------------------------------------transparent color */
 .transparentColor {
   background-color: rgba(0, 0, 255, 0.5);
-  /*                       r  g   b    a
+  /*                     r  g   b    a
   this is another way to write a color
   rgb(); is red, green, blue
   and inside there should be 3 numbers between 0 and 255
@@ -419,10 +456,12 @@ npm start
   the difference is that there should be 4 numbers inside rgba()
   first the values for each color and then the value of a
   a stands for alpha and it makes the color transparent
-  0 makes it invisible
+  0 makes the color invisible
+  0,5 makes the color half way solid
   1 makes the color solid
   */
 }
+
 .redColor {
   background-color: red;
 }
@@ -433,28 +472,28 @@ npm start
   text-align: center;
   margin: 5px;
 }
-/*------------------------------------------------sticky nav*/
+
+/*------------------------------------------------sticky nav */
 .sticky {
-  position: fixed;
+  position: fixed; /* fixes the position at the top of the page */
   /*
-  this says that i would like to stick my nav at the top of the page
+  position gives you the folowing options
+    static - This is default. Element is positioned according to the normal document flow
+    relative - Element is positioned relative to its normal position in the document flow
+    fixed - Element is positioned relative to the viewport
+    absolute - Element is positioned relative to the nearest positioned ancestor
+    sticky - Element toggles between a relative and fixed position, depending on the scroll position
   */
+  
   width: 100%;
   /*
-  you need to add width here because the position fixed messes with the navs width
+  you need to add width here because the position: fixed; messes with the navs width
   */
 }
-/*
-this code makes it so that the nav bar sticks to the top of the page 
-no matter how far down you scroll
-*/
+
 /*------------------------------------------------postiton*/
 .relative {
-  position: relative;
-  /*
-  this is a way to say that when i say position: absolute;
-  it knows that i want it to be inside this one
-  */
+  position: relative;  
   width: 400px;
   height: 200px;
   border: 3px solid #73ad21;
@@ -465,7 +504,7 @@ no matter how far down you scroll
   top: 80px;
   right: 0;
   /*
-  top, left, bottom og right kan kun bruges hvis den har position: absolute;
+  top, left, bottom og right can only be used if it has position: absolute;
   this is what the html looks like :
   <div class="relative">This div element has position: relative;
     <div class="absolute">This div element has position: absolute;</div>
@@ -478,11 +517,13 @@ no matter how far down you scroll
   then this ones position can be anywhere in the html document
   if you remove the position: relative; from the other one this box will jump near the top of the site
   */
+  
   width: 200px;
   height: 100px;
   border: 3px solid #73ad21;
 }
-/*------------------------------------------------media queries*/
+
+/*------------------------------------------------media queries */
 @media only screen and (max-width: 480px) {
   #hide {
     background-color: lightgreen;
@@ -490,7 +531,8 @@ no matter how far down you scroll
   /*
   when the screen is 480px or less in width,
   the background color of my id turns lightgreen
-  you can have a milion lines inside @media only screen and (max-width: 480px) {
+  you can have as many lines as you want inside @media only screen and (max-width: 480px) {
+  
   you can also use @media only screen and (min-width: 480px) {
   that means that when the screen is 480px or wider everything inside it will happen
   */
