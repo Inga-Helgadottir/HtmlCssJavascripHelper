@@ -600,22 +600,20 @@ form.addEventListener("submit", (event) => {
   formItems[7].innerHTML = "password: " + password.value;
   formItems[8].innerHTML = "password2: " + password2.value;
 
+  if (password.value == "") { //you usually do this for each input  
+    console.log("the password is empty");
+    formItems[7].innerHTML = "You are missing a password"
+  } else {
+    console.log("the password is not empty");
+  }
   //you can also check the difference between 2 of them, thats why i have the repeat password input
   if (password.value == password2.value) {
-    console.log(
-      "the passwords match, the next console.log has password.value == password2.value inside it"
-    );
+    console.log("the passwords match, the next console.log has password.value == password2.value inside it");
     console.log(password.value == password2.value);
   } else {
     console.log("the passwords do not match");
     console.log("password.value: " + password.value);
     console.log("password2.value: " + password2.value);
-  }
-
-  if (password.value == "") {
-    console.log("the password is empty");
-  } else {
-    console.log("the password is not empty");
   }
 });
 
